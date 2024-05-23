@@ -1,0 +1,15 @@
+
+[package]
+name = "game_dylib"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+catan_test = { path = "../game", default-features = false }
+
+[features]
+default = ["catan_test/default"]
+dylib-engine = ["catan_test/dylib-engine"]
